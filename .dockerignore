@@ -1,0 +1,17 @@
+
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+
+*.log
+*.tmp
+
+*.o
+*.a
+*.so
+*.exe
+
+.vscode/
+.idea/
+*.swp

@@ -1,7 +1,11 @@
 # FiscalFragment-SelicIndex
 
+## Project Objective Description:
+
+This project aims to provide a streamlined and transparent way to access Brazil’s Selic interest rate data through consumption of the official API, with parameters controlled by a lightweight configuration layer written in Lua (compliance.lua). By externalizing the request parameters into a domain‑specific script, the system ensures flexibility, maintainability, and ease of use for both technical and non‑technical stakeholders.
+
 ## Technologies:
- - **c++20**
+ - **C++20**
  - **CMake**
 
 ## CMake Dependencies:

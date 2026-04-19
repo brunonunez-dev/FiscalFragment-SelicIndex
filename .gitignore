@@ -27,3 +27,5 @@ _deps/
 #s.o
 .DS_Store
 Thumbs.db
+
+CTestCostData.txt

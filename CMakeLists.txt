@@ -33,7 +33,10 @@ FetchContent_MakeAvailable(sol2)
 #--------------------
 find_package(Lua REQUIRED)
 
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} 
+    src/main.cpp
+    src/api/SelicClient.cpp
+)
 
 #   lib links
 target_link_libraries(${PROJECT_NAME} PRIVATE
@@ -43,7 +46,13 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
     ${LUA_LIBRARIES}
 )
 
-target_include_directories(${PROJECT_NAME} PRIVATE ${LUA_INCLUDE_DIR})
+target_include_directories(${PROJECT_NAME} PRIVATE 
+    ${LUA_INCLUDE_DIR} 
+    src 
+    src/api
+    ${cpr_SOURCE_DIR}/include
+    ${json_SOURCE_DIR}/include
+)
 
 #   cp lua script to build dir
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD

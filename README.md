@@ -25,10 +25,16 @@ docker build -t fiscalfragment-selic .
 docker run --rm fiscalfragment-selic
 ```
 ---
-### 3. Unit testing:
+### 3. Cpp testing:
 
 ```bash
-docker run --rm fiscalfragment-selic ./unit_tests
+docker run --rm fiscalfragment-selic ./test_main
+```
+---
+### 3. Lua integrity testing:
+
+```bash
+docker run --rm fiscalfragment-selic ./test_lua
 ```
 ---
 ## Project Tasks:
@@ -37,5 +43,6 @@ docker run --rm fiscalfragment-selic ./unit_tests
     - [x] Unit Testing Setup
     - [x] Docker Setup
     - [x] README
-- [x] Selic api consumption(SelicClient)    
+- [x] Selic api consumption(SelicClient)
+- [x] Parameterized Lua scripting(DSL)
 - [ ] to do...

@@ -31,7 +31,7 @@ FetchContent_MakeAvailable(sol2)
 #--------------------
 #   Executable Config
 #--------------------
-find_package(Lua REQUIRED)
+find_package(Lua 5.3 REQUIRED)
 
 add_executable(${PROJECT_NAME} 
     src/main.cpp
@@ -52,6 +52,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     src/api
     ${cpr_SOURCE_DIR}/include
     ${json_SOURCE_DIR}/include
+    ${sol2_SOURCE_DIR}/include
 )
 
 #   cp lua script to build dir
@@ -60,15 +61,33 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
     ${CMAKE_SOURCE_DIR}/scripts ${CMAKE_BINARY_DIR}/scripts
 )
 
-#   unit tests
 
+#   tests
 enable_testing()
-add_executable(unit_tests tests/test_main.cpp)
 
-target_link_libraries(unit_tests PRIVATE 
+#   Cpp test
+
+add_executable(test_main tests/test_main.cpp)
+
+target_link_libraries(test_main PRIVATE 
     GTest::gtest
     cpr::cpr
     nlohmann_json::nlohmann_json
 )
 
-add_test(NAME Alltests COMMAND unit_tests)
+
+#   Lua test
+
+add_executable(test_lua tests/test_lua.cpp)
+
+target_link_libraries(test_lua PRIVATE
+    sol2
+    ${LUA_LIBRARIES}
+)
+target_include_directories(test_lua PRIVATE
+    ${LUA_INCLUDE_DIR}
+    ${sol2_SOURCE_DIR}/include
+)
+
+add_test(NAME CppTests COMMAND test_main)
+add_test(NAME LuaTests COMMAND test_lua)

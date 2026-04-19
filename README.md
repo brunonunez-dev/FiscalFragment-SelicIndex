@@ -16,19 +16,19 @@
 Make sure you are in the project root (where the `Dockerfile` is located):
 
 ```bash
-docker build -t fiscalfragment .
+docker build -t fiscalfragment-selic .
 ```
 ---
 ### 2. Run with Docker:
 
 ```bash
-docker run --rm fiscalfragment
+docker run --rm fiscalfragment-selic
 ```
 ---
 ### 3. Unit testing:
 
 ```bash
-docker run --rm fiscalfragment ./unit_tests
+docker run --rm fiscalfragment-selic ./unit_tests
 ```
 ---
 ## Project Tasks:
@@ -37,4 +37,5 @@ docker run --rm fiscalfragment ./unit_tests
     - [x] Unit Testing Setup
     - [x] Docker Setup
     - [x] README
+- [x] Selic api consumption(SelicClient)    
 - [ ] to do...

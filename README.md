@@ -1,5 +1,15 @@
 # FiscalFragment-SelicIndex
 
+This file is part of the project version released under the MIT License.
+Up to release v1.0.0 (branch legacy-mit), the project was licensed under MIT.
+
+See the LICENSE file in this branch for details.
+
+## License History - CURRENT LICENSE v1.0.0
+- v1.0.0 and earlier: MIT License
+- v1.1.0 and later: GNU GPLv3
+
+
 ## Project Objective Description:
 
 This project aims to provide a streamlined and transparent way to access Brazil’s Selic interest rate data through consumption of the official API, with parameters controlled by a lightweight configuration layer written in Lua (compliance.lua). By externalizing the request parameters into a domain‑specific script, the system ensures flexibility, maintainability, and ease of use for both technical and non‑technical stakeholders.

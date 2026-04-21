@@ -1,10 +1,4 @@
-/*
- * This file is part of the project version released under the MIT License.
- * Up to release v1.0.0 (branch legacy-mit), the project was licensed under MIT.
- *
- * See the LICENSE file in this branch for details.
- */
-
+//Current License: GNU GPLv3 (since v1.1.0)
 
 #include <iostream>
 #include <strings.h>

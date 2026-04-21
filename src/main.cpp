@@ -1,5 +1,5 @@
 //Current License: GNU GPLv3 (since v1.1.0)
-
+ 
 #include <iostream>
 #include <strings.h>
 #include "api/SelicClient.hpp"

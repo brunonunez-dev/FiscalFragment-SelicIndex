@@ -54,3 +54,4 @@ docker run --rm fiscalfragment-selic ./test_lua
 - [x] Selic api consumption(SelicClient)
 - [x] Parameterized Lua scripting(DSL)
 - [ ] to do...
+ 
